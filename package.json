@@ -1,0 +1,29 @@
+{
+  "name": "expense-keeper",
+  "version": "1.0.0",
+  "description": "This is a full stack web app developed with React and React-Router on the front-end and Node based Express framework with MongoDB as database.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "engines":{
+    "node": "10.15.1"
+  },
+  "author": "Sounak",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/joi": "^16.1.8",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

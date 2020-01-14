@@ -1,0 +1,210 @@
+.manage-transactions{
+    min-height: 100vh;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url('../../assets/report.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+}
+.manage-container{
+    height: 80vh;
+    width: 90%;
+    max-width: 90rem;
+    margin: 11rem auto 2rem auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.manage-container form{
+    width: 85%;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.manage-container form input[type="text"]{
+    flex-basis: 80%;
+    text-align: center;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: none;
+    outline: none;
+    padding: .75rem 0;
+    background: var(--grey);
+}
+.manage-container form button{
+    padding: .75rem 0;
+    flex-basis: 20%;
+    text-align: center;
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: var(--income);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.manage-container h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 3rem 0 1rem 0;
+    color: var(--grey-dark);
+    background-clip: text;
+}
+
+.manage-container ol{
+    padding: 1rem;
+    height: 75vh;
+    width: 90%;
+    overflow-y: scroll;
+    list-style-type: none;
+    margin: 2rem;
+}
+
+.manage-container ol::-webkit-scrollbar{
+    border-radius: 3rem;
+    width: 1rem;
+    cursor: pointer;
+}
+.manage-container ol::-webkit-scrollbar-track{
+    background: var(--text);
+}
+.manage-container ol::-webkit-scrollbar-thumb{
+    width: 1rem;
+    border-radius: 3rem;
+    background: var(--expense);
+    cursor: pointer;
+}
+.manage-item{
+    background: var(--grey);
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    grid-template-columns: 1rem 1fr .5fr;
+    grid-template-rows: .5fr 1.25fr 2rem .5fr; 
+    margin: 1rem;
+    cursor: default;
+    transition: all .5s linear;
+    opacity: .8;
+    max-height: 12rem;
+}
+.manage-item:hover,
+.manage-item:focus{
+    backface-visibility: hidden;
+    outline: none;
+    opacity: 1;
+}
+
+.manage-item em{
+    position: relative; 
+    font-style: normal;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    filter: brightness(50%);
+    grid-row: 1/1;
+    grid-column: 1/1;
+    font-weight: bold;
+}
+
+em.inc{
+    color: var(--income);
+    filter: brightness(50%);
+}
+em.exp{
+    color: var(--expense);
+    filter: brightness(50%);
+}
+
+.manage-item  > span{
+    grid-row: 1/1;
+    grid-column: 2/2;
+    text-align: left;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.manage-item strong{
+    grid-row: 1/1;
+    grid-column: 3/3;
+    text-align: right;
+    font-size: 1.5rem;
+}
+strong.exp{
+    color: var(--expense);
+    filter: brightness(50%);
+}
+strong.inc{
+    color: var(--income);
+    filter: brightness(50%);
+}
+.manage-item pre{
+    grid-row: 2/2;
+    grid-column: 2/-1;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    word-break: break-all;
+}
+pre.inc{
+    color: var(--income);
+    border-left: .7rem solid var(--income);
+    filter: brightness(50%);
+}
+pre.exp{
+    color: var(--expense);
+    filter: brightness(50%);
+    border-left: .7rem solid var(--expense);
+}
+.manage-item p{
+    grid-row: 3/3;
+    grid-column: 2/-1;
+    font-style: italic;
+
+}
+.manage-btn-box{
+    grid-row: 4/4;
+    grid-column: 2/-1;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manage-icon{
+    font-size: 2rem;
+    color: var(--grey-dark);
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.manage-icon:nth-child(1):hover,
+.manage-icon:nth-child(1):focus{
+    outline: none;
+    transform: scale(1.03);
+    color: var(--expense);
+    filter: brightness(70%);
+}
+.manage-icon:nth-child(2):hover,
+.manage-icon:nth-child(2):focus{
+    filter: brightness(70%);
+    outline: none;
+    transform: scale(1.03);
+    color: var(--text);
+}
+
+.manage-return{
+    position: absolute;
+    top: 0rem;
+    left: 1rem;
+}

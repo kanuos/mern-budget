@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Kodchasan:400,700&display=swap');
+
+:root {
+  --text: #111;
+  --grey: #f7f7f7;
+  --grey-dark: #c5c5c5;
+  --edit: #187e18;
+  --income: #28b9b5;
+  --expense: #ff5049;
+  --expense-light: #ff736d;
+}
+
+*,*::after,*::before{
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  font-family: 'Kodchasan', sans-serif;
+  text-decoration: none;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body{
+  position: relative;
+  overflow-x: hidden;
+}
+

@@ -1,0 +1,7 @@
+change database to mongodb atlas
+
+push to github 
+
+link to heroku
+
+deploy on heroku
